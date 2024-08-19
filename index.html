@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhilash Shinde - Computer Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0a192f;
+            --text-color: #8892b0;
+            --highlight-color: #64ffda;
+            --heading-color: #ccd6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: var(--highlight-color);
+            border: 2px solid var(--highlight-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--heading-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li span {
+            color: var(--highlight-color);
+            margin-right: 5px;
+        }
+
+        .resume-button {
+            color: var(--highlight-color);
+            border: 1px solid var(--highlight-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        main {
+            padding: 100px 0;
+        }
+
+        h1 {
+            font-size: 16px;
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 80px;
+            color: var(--heading-color);
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 80px;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 540px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            color: var(--highlight-color);
+            border: 1px solid var(--highlight-color);
+            padding: 20px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        #projects {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        #projects h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: var(--highlight-color);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            background: #1e2a38;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-item h3 {
+            font-size: 24px;
+            color: var(--highlight-color);
+            margin: 10px 0;
+        }
+
+        .project-item p {
+            text-align: left;
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        #contact {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        #contact h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: var(--highlight-color);
+        }
+
+        .contact-details {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: left;
+        }
+
+        .social-links a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+        .project-item a {
+        color: inherit;
+        text-decoration: none;
+        }
+
+        .project-item a:hover {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">A</div>
+            <nav>
+                <ul>
+                    <li><a href="#about"><span>01.</span>About</a></li>
+                    <li><a href="#projects"><span>02.</span>Projects</a></li>
+                    <li><a href="#contact"><span>03.</span>Contact</a></li>
+                </ul>
+            </nav>
+            <a href="path/to/your/resume.pdf" class="resume-button" target="_blank">Resume</a>
+        </header>
+
+        <main>
+            <h1>Hi, my name is</h1>
+            <h2>Abhilash Shinde.</h2>
+            <h3>I explore data for insights.</h3>
+            <p>I'm a computer engineer specializing in exploring and analyzing data for insights. Currently, I'm focused on building applications for predictive modelling.</p>
+        </main>
+
+        <section id="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                         <a href="https://github.com/abhii04/EnergyUsage-Forecast-Model/blob/main/TimeSeriesEnergy.ipynb" target = "_blank">
+                        <img src="img_11.png" alt="Project 1">
+                        <h3>Energy Consumption Forecasting</h3>
+                        <p>This project focuses on forecasting PJME (PJM Eastern Hub) energy consumption using time series analysis techniques. The objective is to develop a robust forecasting model that predicts future energy usage based on historical data. This enables better decision-making and resource management in the energy sector.</p>
+                         </a>
+                    </div>
+                    <div class="project-item">
+                         <a href="https://github.com/abhii04/hridaycare/blob/main/heartfailure%20(2).ipynb" target = "_blank">
+                        <img src="img_10.png" alt="Project 2">
+                        <h3>Heart Failure Risk Prediction</h3>
+                        <p>This Flask-based web app predicts heart disease risk and offers personalized lifestyle recommendations. It employs a Random Forest Classifier for predictions and provides tailored advice based on user inputs like age, sex, and health metrics. The app also enables users to generate and send detailed medical reports to healthcare providers.</p>
+                         </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/abhii04/nlp-sentiment-analysis-amazon-reviews/blob/main/AmazonSentimentReview.ipynb" target = "_blank">
+                        <img src="img_4.png" alt="Project 3">
+                        <h3>Sentiment Analysis of Amazon Reviews</h3>
+                        <p>This repository contains a Jupyter Notebook for performing sentiment analysis on Amazon reviews using two different approaches: VADER (Valence Aware Dictionary and sEntiment Reasoner) and RoBERTa (Robustly optimized BERT approach). The goal of this project is to compare the performance of these sentiment analysis models on a dataset of Amazon reviews and assess their effectiveness.</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/abhii04/employee-churn-prediction/blob/main/turnover.ipynb" target = "_blank">
+                        <img src="img_5.png" alt="Project 4">
+                        <h3>Employee Turnover Prediction</h3>
+                        <p>This project focuses on predicting employee turnover using machine learning techniques. The dataset includes numerical features such as satisfaction level, evaluation score, project count, average monthly hours, and years at the company, along with categorical features like work accident history, promotion status, department, and salary level.</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/abhii04/LLM-finetuning/blob/main/finetuning_falcon_7b.ipynb" target = "_blank">
+                        <img src="img_6.png" alt="Project 5">
+                        <h3>Fine-Tuning Falcon 7B</h3>
+                        <p>This project involves fine-tuning the Falcon 7B language model to generate detailed and creative descriptive prompts. Leveraging the power of Low-Rank Adaptation (LoRA) and quantization techniques, the fine-tuning process optimizes the model for efficiency and performance.</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://datawizz.streamlit.app/" target = "_blank">
+                        <img src="img_7.png" alt="Project 6">
+                        <h3>AI powered Data Visualizer</h3>
+                        <p>DataWizz is a Streamlit application designed to simplify data exploration and visualization. Users can upload CSV or Excel files to interactively analyze and visualize data through various plots like histograms, boxplots, and scatter plots. The app provides explanations for visualizations and suggests machine learning models based on the dataset.</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://polishmyresume.streamlit.app/" target = "_blank">
+                        <img src="img_8.png" alt="Project 7">
+                        <h3>PolishMyResume</h3>
+                        <p>PolishMyResume is a Streamlit application which leverages the Cohere API to enhance and generate professional resumes, making it easier for users to create standout CVs. Enhance your CV and make a perfectly formatted CV which is super ATS friendly!</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/abhii04/song-recommender/blob/main/spotify_recommendation.ipynb" target="_blank">
+                        <img src="img_9.png" alt="Project 8">
+                        <h3>Spotify Song Recommender</h3>
+                        <p>This repository contains a Streamlit web application for recommending songs based on genre similarity. The app uses a dataset of songs with associated genres to suggest similar songs using cosine similarity. Users can input a song title, and the app displays a list of recommended songs.</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                       <a href="https://github.com/abhii04/iris-flower-prediction-app/blob/main/IRIS.ipynb" target="_blank">
+                        <img src="img_12.png" alt="Project 8">
+                        <h3>Iris Flower Prediction App</h3>
+                        <p>This repository hosts a Streamlit web application for predicting the species of Iris flowers based on user-provided measurements of sepal length, sepal width, petal length, and petal width. The app utilizes a Logistic Regression model trained on the classic Iris dataset from the UCI Machine Learning Repository.</p>
+                       </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-details">
+                    <p>Email: abhilashshinde4@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/abhilash-shinde-734215243/" target="_blank" title="LinkedIn">
+                        <img src="img_1.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://medium.com/@abhilashshinde" target="_blank" title="Medium">
+                        <img src="https://cdn4.iconfinder.com/data/icons/social-media-circle-7/512/Medium_circle-512.png" alt="Medium">
+                    </a>
+                    <a href="https://github.com/abhii04" target="_blank" title="GitHub">
+                        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
